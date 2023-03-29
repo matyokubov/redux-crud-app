@@ -12,8 +12,8 @@ const todos = createSlice({
         remove: (state, action) => {
             return state.filter(({id}) => id!==action.payload)
         },
-        update: (state, action) => {
-            state = state.map((todo) => {
+        update: (state, action) => { // in function*
+            state = state.map((todo) => { // Variable*
                 if(todo.id === action.payload.id) {
                     return {...todo, title: action.payload.title}
                 } else {
@@ -21,6 +21,7 @@ const todos = createSlice({
                 }
             })
             console.log("updated", state);
+            return state // return statement*
         }
     }
 })
