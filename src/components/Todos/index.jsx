@@ -11,7 +11,7 @@ const Todos = () => {
                 todos.length!==0 ? <ul>
                         {
                             todos.map((item) => <li key={item.id}>
-                                <TodoItem title={item.title} id={item.id}/>
+                                <TodoItem id={item.id} title={item.title} completed={item.completed}/>
                             </li>)
                         }
                     </ul> :
