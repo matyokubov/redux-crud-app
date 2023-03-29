@@ -18,7 +18,7 @@ const reducer = (state, action) => {
                 }
             }
         case "updateData":
-            alert(action.payload);
+            alert(action.payload); // instead of update function
             return {
                 inputMode: {
                     readOnly: true,
